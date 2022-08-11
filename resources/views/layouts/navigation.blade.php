@@ -12,9 +12,26 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
+                    @if(auth()->user()->hasRole('super-admin'))
+                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                            {{ __('Companies') }}
+                        </x-nav-link>
+                    @endif
+                    @if(auth()->user()->hasRole('company'))
+                        <x-nav-link :href="route('company')" :active="request()->routeIs('company')">
+                            {{ __('Clients') }}
+                        </x-nav-link>
+                    @endif
+                    @if(auth()->user()->hasRole('client'))
+                            <x-nav-link :href="route('client')" :active="request()->routeIs('client')">
+                                {{ __('Dashboard') }}
+                            </x-nav-link>
+                    @endif
+                    @if(auth()->user()->hasRole('company'))
+                            <x-nav-link :href="route('company-balance')" :active="request()->routeIs('company-balance')">
+                                {{ __('Balance') }}
+                            </x-nav-link>
+                    @endif
                 </div>
             </div>
 

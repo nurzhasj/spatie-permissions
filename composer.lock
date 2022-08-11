@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "916273b33453a8d0c7d75b2b711c92ca",
+    "content-hash": "864e1cb7068e077dbc46b1613000eceb",
     "packages": [
         {
             "name": "brick/math",
@@ -5003,6 +5003,55 @@
             "time": "2022-07-20T13:46:29+00:00"
         },
         {
+            "name": "tarlanpayment/payments",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarlanpayment/laravel-client.git",
+                "reference": "6e22e331b81f5900060d5594d0d6428d2a7e82c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarlanpayment/laravel-client/zipball/6e22e331b81f5900060d5594d0d6428d2a7e82c6",
+                "reference": "6e22e331b81f5900060d5594d0d6428d2a7e82c6",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "TarlanPayment\\Payments\\PaymentServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TarlanPayment\\Payments\\": "src/"
+                },
+                "classmap": [
+                    "src/config",
+                    "src/Facades"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Namazbek Bekarysuly",
+                    "email": "namazbek.bekarysuly@tarlanpayments.kz"
+                }
+            ],
+            "description": "payment gateway",
+            "support": {
+                "issues": "https://github.com/tarlanpayment/laravel-client/issues",
+                "source": "https://github.com/tarlanpayment/laravel-client/tree/master"
+            },
+            "time": "2019-10-01T06:34:16+00:00"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.4",
             "source": {
@@ -8058,7 +8107,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "tarlanpayment/payments": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
